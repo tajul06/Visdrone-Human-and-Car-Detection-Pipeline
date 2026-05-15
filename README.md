@@ -75,14 +75,6 @@ Realtime web stream:
 - Web uploads are saved under `pipeline/outputs/web_uploads`.
 - Web outputs are saved under `pipeline/outputs/web_outputs`.
 
-## Web UI
-
-The Web UI screenshots are shown below (kept in the repository root `Web UI/` folder):
-
-![Web UI 1](Web%20UI/Screenshot%202026-05-15%20181911.png)
-
-![Web UI 2](Web%20UI/Screenshot%202026-05-15%20184459.png)
-
 ## Notes
 
 - The pipeline checks for missing paths and empty detections.
