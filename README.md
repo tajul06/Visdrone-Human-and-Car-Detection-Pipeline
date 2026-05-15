@@ -168,8 +168,7 @@ Screenshots (kept in the repository `Web UI/` folder):
 ![Web UI 2](Web%20UI/Screenshot%202026-05-15%20184459.png)
 
 ## Project Wiki
-
-Project wiki (git): https://github.com/tajul06/Visdrone-Human-and-Car-Detection-Pipeline.wiki.git
+For detailed explanation check  Project wiki (git): [Drone Detection Pipeline](https://github.com/tajul06/Visdrone-Human-and-Car-Detection-Pipeline/wiki)
 
 ## Notes
 
