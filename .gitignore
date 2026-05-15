@@ -1,2 +1,8 @@
 # Ignore Dataset Exploration results folder
 /Dataset Exploration/results/__results___files/
+
+# Python cache
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
