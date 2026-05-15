@@ -75,6 +75,22 @@ Realtime web stream:
 - Web uploads are saved under `pipeline/outputs/web_uploads`.
 - Web outputs are saved under `pipeline/outputs/web_outputs`.
 
+## Web UI
+
+Run the Flask web interface to view live stream and upload results:
+
+```bash
+python pipeline/src/web_app.py --host 127.0.0.1 --port 5000
+```
+
+Open http://127.0.0.1:5000 in a browser. The web UI shows a Live Stream viewer and a Web Uploads gallery.
+
+Screenshots (kept in the repository `Web UI/` folder):
+
+![Web UI 1](Web%20UI/Screenshot%202026-05-15%20181911.png)
+
+![Web UI 2](Web%20UI/Screenshot%202026-05-15%20184459.png)
+
 ## Notes
 
 - The pipeline checks for missing paths and empty detections.
