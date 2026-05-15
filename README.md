@@ -1,6 +1,82 @@
 # Drone Detection Pipeline
 
-This folder contains a lightweight inference pipeline for person and car detection, counting, and tracking on drone footage using Ultralytics YOLO models. The scripts run on images, folders, videos, or a webcam stream.
+This Project contains a lightweight inference pipeline for person and car detection, counting, and tracking on drone footage using Ultralytics YOLO models. The scripts run on images, folders, videos, or a webcam stream.
+
+
+
+## Project Structure
+
+```
+Visdrone-Human-and-Car-Detection-Pipeline/
+│
+├── Dataset Exploration/
+│   ├── exploration_result.ipynb     # Phase 1: full EDA and dataset analysis notebook
+│   └── results/                     # Saved charts (class distribution, bbox sizes, samples)
+│
+├── Pipeline/                        # Phase 5: inference pipeline
+│   ├── config.yaml                  # Runtime config — model path, imgsz, conf, tracker
+│   ├── requirements.txt
+│   ├── models/
+│   │   └── yolo26s_visdrone.pt      # Fine-tuned checkpoint (place weights here)
+│   ├── outputs/
+│   │   ├── images/                  # Annotated image outputs
+│   │   └── web_uploads/             # Uploads and results from Flask UI
+│   ├── src/
+│   │   ├── detect_count.py          # Detection + counting entry point
+│   │   ├── track.py                 # Tracking entry point (BoT-SORT / ByteTrack)
+│   │   ├── web_app.py               # Flask web interface
+│   │   ├── utils.py                 # Shared helpers
+│   │   └── __init__.py
+│   ├── trackers/
+│   │   ├── botsort.yaml             # BoT-SORT config (primary — has GMC)
+│   │   └── bytetrack.yaml           # ByteTrack config (fast fallback)
+│   └── web/
+│       ├── static/
+│       │   └── styles.css
+│       └── templates/
+│           └── index.html
+│
+├── Training & Fine Tuning/          # Phase 3: training notebooks
+│   ├── visdrone-rt-detr-training.ipynb
+│   ├── yolo11s_visdrone.ipynb
+│   ├── yolo26m_visdrone.ipynb
+│   ├── yolo26s-hbb-visdrone.ipynb
+│   ├── yolo26s-obb-visdrone.ipynb
+│   └── Training Results/            # Per-model saved weights and inference results
+│       ├── RETDER-l/
+│       │   ├── results.csv
+│       │   └── Inference/
+│       ├── Yolo11s/
+│       │   └── Inference/
+│       │       └── results.csv
+│       ├── Yolo26m/
+│       │   └── Inference/
+│       ├── yolo26s/
+│       │   └── Inference/
+│       └── Yolo26s-OBB/
+│           └── Inference/
+│
+├── Web UI/                          # Flask web interface screenshots
+└── README.md
+```
+
+---
+
+## Tech Stack
+
+| Tool | Role |
+|------|------|
+| **Python 3.10+** | Core language |
+| **Ultralytics (YOLO)** | Model training, inference, tracking |
+| **PyTorch** | Deep learning backend |
+| **OpenCV** | Frame reading, annotation, video I/O |
+| **NumPy** | Bounding box math, label manipulation |
+| **Flask** | Web inference interface |
+| **PyYAML** | Config management |
+| **Matplotlib / Seaborn** | Plots and dataset visualizations |
+| **Kaggle / T4 GPU** | Training environment (2× Tesla T4, 16 GB VRAM each) |
+
+---
 
 ## Setup
 
