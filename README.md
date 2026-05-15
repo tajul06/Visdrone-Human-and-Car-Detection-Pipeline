@@ -75,6 +75,36 @@ Realtime web stream:
 - Web uploads are saved under `pipeline/outputs/web_uploads`.
 - Web outputs are saved under `pipeline/outputs/web_outputs`.
 
+## Web UI Preview In README
+
+Use Markdown image syntax to show screenshots (PNG or JPG):
+
+```md
+![Web UI Preview](Pipeline/outputs/web_outputs/images/0000000_02021_d_0000005_web.jpg)
+```
+
+If you want to control image width in GitHub README, use HTML:
+
+```html
+<img src="Pipeline/outputs/web_outputs/images/0000000_02021_d_0000005_web.jpg" alt="Web UI Preview" width="900" />
+```
+
+Example render:
+
+![Web UI Preview](Pipeline/outputs/web_outputs/images/0000000_02021_d_0000005_web.jpg)
+
+If you keep screenshots in the `Web UI/` folder at the repository root, reference them directly (note spaces are URL-encoded for reliable rendering):
+
+```md
+![Web UI Screenshot](Web%20UI/Screenshot%202026-05-15%20181911.png)
+```
+
+Or with size control using HTML:
+
+```html
+<img src="Web%20UI/Screenshot%202026-05-15%20184459.png" alt="Web UI Screenshot" width="900" />
+```
+
 ## Notes
 
 - The pipeline checks for missing paths and empty detections.
