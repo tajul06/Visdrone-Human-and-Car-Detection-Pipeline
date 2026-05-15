@@ -167,62 +167,10 @@ Screenshots (kept in the repository `Web UI/` folder):
 
 ![Web UI 2](Web%20UI/Screenshot%202026-05-15%20184459.png)
 
-<<<<<<< trial-and-error
-## Repository tree
-
-```
-README.md
-Dataset Exploration/
-	exploration_result.ipynb
-	results/
-		__results___files/
-Pipeline/
-	config.yaml
-	requirements.txt
-	models/
-		yolo26s_visdrone.pt
-	outputs/
-		images/
-		web_uploads/
-	src/
-		__init__.py
-		detect_count.py
-		track.py
-		utils.py
-		web_app.py
-	trackers/
-		botsort.yaml
-		bytetrack.yaml
-	web/
-		static/
-			styles.css
-		templates/
-			index.html
-Training & Fine Tuning/
-	visdrone-rt-detr-training.ipynb
-	yolo11s_visdrone.ipynb
-	yolo26m_visdrone.ipynb
-	yolo26s-hbb-visdrone.ipynb
-	yolo26s-obb-visdrone.ipynb
-	Training Results/
-		RETDER -l/
-			results.csv
-			Inference/
-		Yolo11s/
-			Inference/
-				results.csv
-		Yolo26m/
-			Inference/
-		yolo26s/
-			Inference/
-		Yolo26s-OBB/
-			Inference/
-Web UI/
-```
 =======
 ## Project Wiki
 For detailed explanation check  Project wiki (git): [Drone Detection Pipeline Wiki](https://github.com/tajul06/Visdrone-Human-and-Car-Detection-Pipeline/wiki)
->>>>>>> main
+
 
 ## Notes
 
