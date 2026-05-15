@@ -5,5 +5,21 @@
 __pycache__/
 .pytest_cache/
 *.py[cod]
+venv/
+Pipeline.venv/
+
+# Generated pipeline artifacts
+# Ignore all outputs by default
+Pipeline/outputs/**
+# Track publishable web outputs
+!Pipeline/outputs/web_outputs/
+!Pipeline/outputs/web_outputs/**
+# Track web uploads but ignore videos inside it
+!Pipeline/outputs/web_uploads/
+!Pipeline/outputs/web_uploads/**
+Pipeline/outputs/web_uploads/*.mp4
+Pipeline/outputs/web_uploads/*.avi
+Pipeline/outputs/web_uploads/*.mov
+Pipeline/outputs/web_uploads/*.mkv
 
 
