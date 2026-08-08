@@ -151,6 +151,24 @@ Realtime web stream:
 - Web uploads are saved under `pipeline/outputs/web_uploads`.
 - Web outputs are saved under `pipeline/outputs/web_outputs`.
 
+## Results
+
+All five models were fine-tuned for 50 epochs on the VisDrone 2-class dataset (person, car) and evaluated on the validation set (548 images, ~28,033 instances).
+
+| Model | mAP50 | mAP50-95 | Precision | Recall | Inference (ms) | Params |
+|---|---|---|---|---|---|---|
+| **YOLO26s-OBB** | **0.838** | **0.641** | 0.824 | **0.767** | 30.3 | 9.8M |
+| YOLO26m | 0.824 | 0.521 | **0.834** | 0.756 | 63.9 | 20.4M |
+| YOLO26s | 0.795 | 0.493 | 0.812 | 0.730 | 23.3 | 9.5M |
+| YOLO11s | 0.792 | 0.490 | 0.817 | 0.729 | **21.2** | **9.4M** |
+| RT-DETR | 0.747 | 0.447 | 0.792 | 0.697 | 54.9 | — |
+
+**Best overall:** YOLO26s-OBB — highest mAP50 and mAP50-95, thanks to oriented bounding boxes fitting aerial object footprints more tightly than axis-aligned boxes.
+**Best for edge deployment:** YOLO11s — lightest (9.4M params) and fastest (21.2ms) for resource-constrained devices.
+
+ Full benchmark breakdown, per-metric rankings, and use-case recommendations: [Model Comparison wiki](https://github.com/tajul06/Visdrone-Human-and-Car-Detection-Pipeline/wiki/Model-Comparison)
+ Training details, dataset exploration, and challenges encountered: see the [full wiki](https://github.com/tajul06/Visdrone-Human-and-Car-Detection-Pipeline/wiki)
+
 ## Web UI
 
 Run the Flask web interface to view live stream and upload results:
